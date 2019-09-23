@@ -15,6 +15,8 @@ public class Application {
         try {
             BiGramModel biGramModel = new BiGramModel(loadFileAndSanitize(corpusFileLocation));
             biGramModel.getNextPredictedWord(word);
-        } catch (IOException e) { }
+        } catch (IOException e) {
+            System.out.println("Failed to load input file: " + e);
+        }
     }
 }
